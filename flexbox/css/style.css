@@ -1,0 +1,564 @@
+/** box fix **/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/** kleuren **/
+:root {
+  --site-achtergrond: #f3f3f3;
+  --sectie-achtergrond: #ffffff;
+  --border: #e6e6e6;
+  --link-achtergrond: #f5f5f5;
+  --tekst: #333333;
+  --footer-tekst: #808080;
+  --yfa-blauw: #0e76a8;
+}
+
+/** lettertype's **/
+h1,
+h2,
+h3 {
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 1rem;
+  color: var(--tekst);
+  background-color: var(--site-achtergrond);
+}
+
+/** menu **/
+.menu-knop {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--sectie-achtergrond);
+  font-weight: bolder;
+}
+
+.menu-item {
+  display: none;
+  flex: 1 0 10%;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sectie-achtergrond);
+  font-weight: bolder;
+  white-space: nowrap;
+}
+
+.menu-sticky {
+  position: sticky;
+  top: 0%;
+  margin-bottom: 1rem;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  margin-top: auto;
+}
+
+img[aria-hidden="true"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 5%;
+}
+
+header {
+  margin-bottom: 0 !important;
+}
+
+/** links **/
+a {
+  color: var(--tekst);
+  text-decoration: none;
+}
+
+a:active,
+a:focus,
+a:hover,
+a:hover > h3 {
+  background-color: var(--sectie-achtergrond);
+  color: var(--link-achtergrond);
+}
+[aria-hidden="true"] ~ p {
+  color: var(--yfa-blauw);
+}
+
+.social > a > img:hover,
+.social > a > img:active {
+  filter: invert(0.4);
+}
+
+a > h3:hover,
+a > h3:active,
+a > h3:focus,
+a > h3:visited {
+  background-color: var(--yfa-blauw);
+}
+
+[aria-label="Social en contact informatie"] > a:visited,
+[aria-label="Social en contact informatie"] > a:active,
+[aria-label="Social en contact informatie"] > a:focus,
+[aria-label="Social en contact informatie"] > a:hover {
+  color: var(--tekst);
+}
+
+p > a {
+  color: var(--yfa-blauw);
+}
+
+p > a:visited {
+  color: var(--footer-tekst);
+}
+/** Curriculum-Vitae **/
+.flex-rij > a:hover {
+  background-color: var(--link-achtergrond);
+}
+
+/**social**/
+.social {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.social > a > img {
+  padding: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+/** layout **/
+ul {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+section {
+  background-color: var(--sectie-achtergrond);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 1rem 0;
+}
+h2 {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  margin-top: 0;
+}
+
+h2:first-child {
+  padding-top: 0;
+}
+
+[alt="avatar"] {
+  height: auto;
+  width: 100%;
+  margin: 0 auto 1rem;
+  max-width: 370px;
+}
+
+section > :last-child,
+section > div:last-child > div:last-child > :last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+a > h3 {
+  padding: 1rem 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+a > p {
+  margin: 0;
+}
+/** flex **/
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-kolom {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-rij {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+.flex-rij > a:last-child {
+  padding-left: 0.5rem;
+}
+
+.flex-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 0;
+  background-color: var(--link-achtergrond);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: var(--yfa-blauw);
+}
+
+.flex-link > p {
+  margin: 0;
+}
+
+.flex-link > .flex-rij {
+  padding-left: 1rem;
+  flex-direction: row;
+}
+.flex-split {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.flex-split > p {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 11rem;
+  margin: 0;
+}
+
+.flex-split > p:first-child {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ervaring {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ervaring > p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.ervaring > p:first-child {
+  white-space: nowrap;
+}
+
+.ervaring > h3 {
+  margin: 0;
+}
+
+.ervaring-inhoud {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ervaring-inhoud > .flex-rij {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ervaring-inhoud > p:first-child {
+  margin-bottom: 0;
+}
+
+.ervaring-inhoud > p:nth-child(2) {
+  margin: 0;
+}
+
+.ervaring > .flex-rij {
+  flex-direction: row;
+}
+.flex-rij > span {
+  color: var(--yfa-blauw);
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+.flex-kolom > h3 ~ p {
+  margin-bottom: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--tekst);
+  color: var(--footer-tekst);
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  min-width: 0;
+  flex: 2 0 0;
+}
+
+aside {
+  flex: 0 0 0;
+}
+
+/**tabellen **/
+[aria-label="Technische skills"],
+[aria-label="Talen"] {
+  padding: 0;
+}
+
+[aria-label="Technische skills"] > h2,
+[aria-label="Talen"] > h2 {
+  padding-left: 1rem;
+}
+
+.tabel-fix {
+  border-bottom: none;
+  padding-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.8rem;
+}
+
+th,
+tr {
+  padding: 0.5rem;
+  line-height: 1rem;
+  vertical-align: top;
+  border-top: 1px solid var(--border);
+}
+
+tr {
+  text-align: center;
+  vertical-align: middle;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: var(--site-achtergrond);
+}
+
+/** Media query's**/
+
+/** tablet **/
+@media screen and (min-width: 576px) {
+  .flex-split,
+  .ervaring,
+  .flex-rij {
+    flex-direction: row;
+  }
+
+  .flex-container > .flex-rij {
+    flex-direction: column;
+  }
+
+  [alt="avatar"] {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ervaring > .flex-rij {
+    margin-left: auto;
+  }
+
+  .ervaring > h3 {
+    margin-left: 2rem;
+  }
+  table {
+    font-size: 1rem;
+  }
+
+  section,
+  header,
+  h1 {
+    margin: 0 1rem 1rem;
+  }
+}
+
+/** desktop klein scherm **/
+@media screen and (min-width: 992px) {
+  nav,
+  .flex-container > .flex-rij {
+    flex-direction: row;
+  }
+  .flex-container {
+    width: 100%;
+  }
+  aside {
+    margin-right: 1rem;
+  }
+
+  [aria-label="Persoonlijke gegevens"] > .flex-rij,
+  [aria-label="Persoonlijke informatie"] > .flex-rij {
+    flex-direction: column;
+  }
+
+  section,
+  header {
+    margin: 0 0 1rem !important;
+  }
+
+  h1 {
+    margin-left: 0;
+  }
+}
+
+/** desktop groot scherm **/
+@media screen and (min-width: 1200px) {
+  .flex-container {
+    width: 90%;
+  }
+  [aria-label="Persoonlijke informatie"] > .flex-rij {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .flex-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .flex-container {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .flex-container {
+    width: 60%;
+  }
+}
+@media print {
+  section,
+  main,
+  aside,
+  nav,
+  * {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  body,
+  header {
+    visibility: hidden;
+    overflow: visible !important;
+  }
+  nav,
+  [aria-label="Social en contact informatie"],
+  [aria-label="Curriculum-Vitae"] {
+    display: none;
+  }
+  .print,
+  h1 {
+    visibility: visible;
+    height: auto !important;
+  }
+
+  .pagina-einde {
+    page-break-after: always !important;
+  }
+
+  html {
+    color: var(--sectie-achtergrond);
+  }
+
+  .ervaring:not(:first-child) {
+    margin-top: 1rem;
+  }
+  .ervaring-inhoud > p:last-child,
+  .ervaring-inhoud > p:first-child {
+    margin-top: 1rem;
+  }
+
+  .flex-rij > span {
+    color: var(--tekst);
+  }
+
+  .flex-container {
+    width: 100%;
+  }
+
+  ul {
+    margin-left: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  [aria-label="Werkervaring"] {
+    margin-top: 2rem;
+  }
+
+  [alt="avatar"] {
+    margin-left: 11rem !important;
+    max-width: 370px;
+  }
+
+  [aria-label="Persoonlijke informatie"] > :last-child {
+    margin-top: 1rem;
+  }
+
+  .ervaring > h3 {
+    margin-left: 2rem;
+  }
+  .ervaring > .flex-rij {
+    margin-left: auto;
+  }
+  br,
+  header,
+  [aria-label="Curriculum-Vitae"],
+  [aria-label="Social en contact informatie"],
+  [aria-label="Persoonlijke gegevens"] > .flex-rij,
+  .flex-split,
+  .ervaring {
+    flex-direction: row;
+  }
+
+  [aria-label="Technische skills"] > h2,
+  [aria-label="Talen"] > h2 {
+    padding-left: 0rem;
+  }
+  /* verwijder overbodige informatie (h2, naam en woonplaats) op de eerste pagina*/
+  [aria-label="Persoonlijke informatie"] > h2,
+  [aria-label="Persoonlijke informatie"]
+    > .flex-rij
+    > .flex-kolom
+    > .flex-split:first-child,
+  [aria-label="Persoonlijke informatie"]
+    > .flex-rij
+    > .flex-kolom:first-child
+    > .flex-split:nth-child(2) {
+    display: none;
+  }
+}
