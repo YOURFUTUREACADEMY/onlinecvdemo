@@ -24,66 +24,59 @@ h1,
 h2,
 h3 {
   font-family: "Raleway", sans-serif;
-  font-weight: bold;
 }
 
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 1rem;
   color: var(--tekst);
-}
-
-h2 {
-  border-bottom: 1px solid var(--border);
-  font-size: 1.5rem;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.17rem;
-}
-/** layout **/
-body {
   background-color: var(--site-achtergrond);
 }
 
-footer {
-  background-color: var(--tekst);
-  color: var(--footer-tekst);
-}
-
-section {
+/** menu **/
+.menu-knop {
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: flex-start;
   background-color: var(--sectie-achtergrond);
+  font-weight: bolder;
 }
 
-h1 {
-  margin-left: -15px;
+.menu-item {
+  display: none;
+  flex: 1 0 10%;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sectie-achtergrond);
+  font-weight: bolder;
+  white-space: nowrap;
 }
 
-ul {
-  list-style: none;
+.menu-sticky {
+  position: sticky;
+  top: 0%;
+  margin-bottom: 1rem;
 }
 
-p {
-  margin-bottom: 0;
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  margin-top: auto;
 }
 
-a > h3 {
-  border-top: 1px solid var(--border);
-  font-size: 1.25rem;
+img[aria-hidden="true"] {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 5%;
 }
 
-[alt="avatar"] {
-  max-width: 370px;
-  margin: 0 auto;
-}
-
-.social > a > img {
-  height: 3rem;
-  width: 3rem;
+header {
+  margin-bottom: 0 !important;
 }
 
 /** links **/
@@ -93,32 +86,19 @@ a {
 }
 
 a:active,
-a:visited a:focus,
-a:focus-within a:hover,
+a:focus,
+a:hover,
 a:hover > h3 {
-  background-color: var(--sectie-achtergrond);
-  color: var(--link-achtergrond);
-}
-
-span {
+  /* background-color: var(--sectie-achtergrond); */
   color: var(--yfa-blauw);
 }
-
-.link {
-  background-color: var(--link-achtergrond);
+[aria-hidden="true"] ~ p {
   color: var(--yfa-blauw);
-  margin-bottom: 1rem;
 }
 
 .social > a > img:hover,
-.social > a > img:active,
-.social > a > img:focus,
-.social > a > img:visited {
+.social > a > img:active {
   filter: invert(0.4);
-}
-
-.row.justify-content-start > .col-2:hover {
-  background-color: var(--link-achtergrond);
 }
 
 a > h3:hover,
@@ -134,6 +114,7 @@ a > h3:visited {
 [aria-label="Social en contact informatie"] > a:hover {
   color: var(--tekst);
 }
+
 p > a {
   color: var(--yfa-blauw);
 }
@@ -141,37 +122,229 @@ p > a {
 p > a:visited {
   color: var(--footer-tekst);
 }
-/** menu **/
-
-img[aria-hidden="true"] {
-  width: 1.2rem;
-  max-width: 3rem;
-  height: 1.2rem;
-  margin-right: 1rem;
-}
-img[alt="PDF icoon"] {
-  margin-right: 0;
+/** Curriculum-Vitae **/
+.flex-rij > a:hover {
+  background-color: var(--link-achtergrond);
 }
 
-.navbar {
-  padding: 0 0 1rem;
+/**social**/
+.social {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.navbar-toggler,
-.nav-link {
+.social > a > img {
+  padding: 0.5rem;
+  width: 4rem;
+  height: 4rem;
+}
+
+/** layout **/
+ul {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+section {
   background-color: var(--sectie-achtergrond);
-  font-weight: bolder;
   padding: 1rem;
+  margin-bottom: 1rem;
 }
+
+h1 {
+  margin: 1rem 0;
+}
+h2 {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+  margin-top: 0;
+}
+
+h2:first-child {
+  padding-top: 0;
+}
+
+[alt="avatar"] {
+  height: auto;
+  width: 100%;
+  margin: 0 auto 1rem;
+  max-width: 370px;
+}
+
+section > :last-child,
+section > div:last-child > div:last-child > :last-child {
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+a > h3 {
+  padding: 1rem 0;
+  margin: 0;
+  border-top: 1px solid var(--border);
+}
+
+a > p {
+  margin: 0;
+}
+/** flex **/
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-kolom {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-rij {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
+}
+.flex-rij > a:last-child {
+  padding-left: 0.5rem;
+}
+
+.flex-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 1 0;
+  background-color: var(--link-achtergrond);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  color: var(--yfa-blauw);
+}
+
+.flex-link > p {
+  margin: 0;
+}
+
+.flex-link > .flex-rij {
+  padding-left: 1rem;
+  flex-direction: row;
+}
+.flex-split {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.flex-split > p {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 11rem;
+  margin: 0;
+}
+
+.flex-split > p:first-child {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.ervaring {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.ervaring > p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.ervaring > p:first-child {
+  white-space: nowrap;
+}
+
+.ervaring > h3 {
+  margin: 0;
+}
+
+.ervaring-inhoud {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.ervaring-inhoud > .flex-rij {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.ervaring-inhoud > p:first-child {
+  margin-bottom: 0;
+}
+
+.ervaring-inhoud > p:nth-child(2) {
+  margin: 0;
+}
+
+.ervaring > .flex-rij {
+  flex-direction: row;
+}
+.flex-rij > span {
+  color: var(--yfa-blauw);
+  white-space: nowrap;
+  padding-right: 1rem;
+}
+
+.flex-kolom > h3 ~ p {
+  margin-bottom: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--tekst);
+  color: var(--footer-tekst);
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+main {
+  min-width: 0;
+  flex: 2 0 0;
+}
+
+aside {
+  flex: 0 0 0;
+}
+
 /**tabellen **/
-h2.tabel-fix {
-  border: none;
+[aria-label="Technische skills"],
+[aria-label="Talen"] {
+  padding: 0;
+}
+
+[aria-label="Technische skills"] > h2,
+[aria-label="Talen"] > h2 {
+  padding-left: 1rem;
+}
+
+.tabel-fix {
+  border-bottom: none;
+  padding-bottom: 1rem;
 }
 
 table {
   width: 100%;
+  border-collapse: collapse;
   border-spacing: 0;
-  font-size: small;
+  font-size: 0.8rem;
 }
 
 th,
@@ -193,27 +366,119 @@ tbody > tr:nth-child(odd) {
 
 /** Media query's**/
 
-@media (min-width: 576px) {
+/** tablet **/
+@media screen and (min-width: 576px) {
+  .flex-split,
+  .ervaring,
+  .flex-rij {
+    flex-direction: row;
+  }
+
+  .flex-container > .flex-rij {
+    flex-direction: column;
+  }
+
+  [alt="avatar"] {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ervaring > .flex-rij {
+    margin-left: auto;
+  }
+
+  .ervaring > h3 {
+    margin-left: 2rem;
+  }
   table {
-    font-size: medium;
+    font-size: 1rem;
   }
 
-  .social > a > img {
-    width: 6rem !important;
+  section,
+  header,
+  h1 {
+    margin: 0 1rem 1rem;
   }
 }
 
-@media (min-width: 992px) {
-  nav {
-    margin: 0 -1rem;
+/** desktop klein scherm **/
+@media screen and (min-width: 992px) {
+  nav,
+  .flex-container > .flex-rij {
+    flex-direction: row;
   }
-  .negative-lg-lm {
-    margin-left: -1rem !important;
+  .flex-container {
+    width: 100%;
+  }
+  aside {
+    margin-right: 1rem;
+  }
+
+  [aria-label="Persoonlijke gegevens"] > .flex-rij,
+  [aria-label="Persoonlijke informatie"] > .flex-rij {
+    flex-direction: column;
+  }
+
+  section,
+  header {
+    margin: 0 0 1rem !important;
+  }
+
+  h1 {
+    margin-left: 0;
   }
 }
 
+/** desktop groot scherm **/
+@media screen and (min-width: 1200px) {
+  .flex-container {
+    width: 90%;
+  }
+  [aria-label="Persoonlijke informatie"] > .flex-rij {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .flex-container {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .flex-container {
+    width: 75%;
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .flex-container {
+    width: 60%;
+  }
+}
 @media print {
-  .print {
+  section,
+  main,
+  aside,
+  nav,
+  * {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  body,
+  header {
+    visibility: hidden;
+    overflow: visible !important;
+  }
+  nav,
+  [aria-label="Social en contact informatie"],
+  [aria-label="Curriculum-Vitae"] {
+    display: none;
+  }
+  .print,
+  h1 {
     visibility: visible;
     height: auto !important;
   }
@@ -222,44 +487,83 @@ tbody > tr:nth-child(odd) {
     page-break-after: always !important;
   }
 
-  .niet-printen,
-  nav,
-  footer,
-  [aria-label="Curriculum-Vitae"],
-  [aria-label="Social en contact informatie"],
-  [aria-label="Persoonlijke informatie"] > h2 {
-    display: none;
+  html {
+    color: var(--sectie-achtergrond);
   }
 
-  section,
-  aside,
-  main,
-  .p-3,
-  * {
-    margin: 0 !important;
-    padding: 0 !important;
+  .ervaring:not(:first-child) {
+    margin-top: 1rem;
   }
-
-  .col-print-6 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
-
-  .col-print-12 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  section > :last-child {
+  .ervaring-inhoud > p:last-child,
+  .ervaring-inhoud > p:first-child {
     margin-top: 1rem;
   }
 
-  h1 {
-    margin-left: -1rem;
+  .flex-rij > span {
+    color: var(--tekst);
   }
-  @media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
-    .chrome {
-      margin-top: -2rem;
-    }
+
+  .flex-container {
+    width: 100%;
   }
+
+  ul {
+    margin-left: 3rem;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+
+  [aria-label="Werkervaring"] {
+    margin-top: 2rem;
+  }
+
+  [alt="avatar"] {
+    margin: 0 1rem 0 0 ;
+    max-width: 370px;
+  }
+.printRow{
+  display: flex;
+  flex-direction: column;
+}
+  [aria-label="Persoonlijke informatie"] > :last-child {
+    margin-top: 1rem;
+  }
+
+  .ervaring > h3 {
+    margin-left: 2rem;
+  }
+  .ervaring > .flex-rij {
+    margin-left: auto;
+  }
+  br,
+  header,
+  [aria-label="Curriculum-Vitae"],
+  [aria-label="Social en contact informatie"],
+  [aria-label="Persoonlijke gegevens"] > .flex-rij,
+  .flex-split,
+  .ervaring {
+    flex-direction: row;
+  }
+
+  [aria-label="Technische skills"] > h2,
+  [aria-label="Talen"] > h2 {
+    padding-left: 0rem;
+  }
+  /* verwijder overbodige informatie (h2, naam en woonplaats) op de eerste pagina*/
+  [aria-label="Persoonlijke informatie"] > h2,
+  [aria-label="Persoonlijke informatie"]
+    > .flex-rij
+    > .flex-kolom
+    > .flex-split:first-child,
+  [aria-label="Persoonlijke informatie"]
+    > .flex-rij
+    > .flex-kolom:first-child
+    > .flex-split:nth-child(2) {
+    display: none;
+  }
+
+  
 }
