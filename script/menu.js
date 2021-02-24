@@ -29,6 +29,7 @@ secties.forEach(function (element) {
 function Toggle() {
   /* controleer of de pagina klein genoeg is voor de menuknop.*/
   if (window.innerWidth < breedte) {
+    alert("Hallo");
     if (menu_knop.style.display !== "none") {
       menu_knop.style.display = "none";
       menu_items.forEach(function (element) {
