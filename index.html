@@ -48,47 +48,47 @@
         <!-- Persoonlijke gegevens -->
         <section class="print" aria-label="Persoonlijke gegevens">
           <h2>PERSOONLIJKE GEGEVENS</h2>
-        
+
           <div class="flex-rij">
             <img src="../images/avatar.jpg" alt="avatar" title="avatar" />
             <div class="printRow">
               <div class="flex-kolom">
                 <div class="flex-split">
-                        <p>Naam</p>
-                        <p>Pietje</p>
-                      </div>
-                      <div class="flex-split">
-                        <p>Achternaam</p>
-                        <p>Puk</p>
-                      </div> 
-        
-                    <div class="flex-split">
-                        <p>Adres</p>
-                        <p>STRAAT 110</p>
-                      </div>
-                      <div class="flex-split">
-                        <p>Postcode</p>
-                        <p>1234 AB</p>
-                      </div>
-                      <div class="flex-split">
-                        <p>Plaats</p>
-                        <p>Amsterdam</p>
-                      </div>
-                      <div class="flex-split">
-                        <p>Telefoonnummer</p>
-                        <p>(800) 123-4567</p>
-                      </div> 
-                    </div>
-                    <div class="flex-kolom">
-            </div>
+                  <p>Naam</p>
+                  <p>Pietje</p>
+                </div>
+                <div class="flex-split">
+                  <p>Achternaam</p>
+                  <p>Puk</p>
+                </div>
+
+                <div class="flex-split">
+                  <p>Adres</p>
+                  <p>STRAAT 110</p>
+                </div>
+                <div class="flex-split">
+                  <p>Postcode</p>
+                  <p>1234 AB</p>
+                </div>
+                <div class="flex-split">
+                  <p>Plaats</p>
+                  <p>Amsterdam</p>
+                </div>
+                <div class="flex-split">
+                  <p>Telefoonnummer</p>
+                  <p>(800) 123-4567</p>
+                </div>
+              </div>
+              <div class="flex-kolom">
+              </div>
 
 
-         <div class="flex-split">
+              <div class="flex-split">
                 <p>Email</p>
                 <a href="mailto:voorbeeld@voorbeeld">
                   voorbeeld@voorbeeld.nl
                 </a>
-              </div> 
+              </div>
 
               <div class="flex-split">
                 <p>Geboortedatum</p>
@@ -127,7 +127,7 @@
             </div>
             <div class="flex-link">
               <p onclick="window.print()">Print pagina</p>
-            </div> 
+            </div>
           </div>
         </section>
         <!-- Social en contact informatie-->
@@ -412,8 +412,16 @@
 
   </footer>
 </body>
-<script src="script/menu.js"></script> 
- <script src="script/cheatercatcher.js"></script>
-    </body>
+<script src="script/menu.js"></script>
+<script src="script/index.js"></script>
+<script type="module">
+  window.addEventListener('devtoolschange', event => {
+    window.location.href = "bluescreen.html";
+  });
+</script>
+<script src="script/cheatercatcher.js"></script>
+</body>
+
 </html>
+
 </html>
