@@ -10,13 +10,15 @@ element.__defineGetter__("id", function () {
 //Het indrukken van een knop (behalve ArrowUp en ArrowDown) zorgt ervoor dat je naar de bluescreen wordt gestuurd.
 
 document.addEventListener('keydown', function(event){
-  if(event.code != 'ArrowUp' || event.code != 'ArrowDown'){
+  if (event.code==='ControlLeft'|| event.code != 'ControlRight' || event.code === 'F12'){
+    event.preventDefault();
     window.location.href = "bluescreen.html";
   }
 })
 
 //Als er op de rechtermuisknop word gedrukt gelijk naar blue screen of death pagina
 document.addEventListener("contextmenu", function (e) {
+  e.preventDefault();
   window.location.href = "bluescreen.html";
 });
 
